@@ -1,0 +1,17 @@
+---
+import '../styles/global.css';
+import ChatWidget from '../components/ChatWidget';
+export const prerender = false;
+---
+<html lang="es">
+  <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><title>Estudio Demo</title></head>
+  <body class="bg-slate-50 text-slate-800">
+    <main class="mx-auto max-w-3xl px-6 py-24 text-center">
+      <h1 class="text-4xl font-bold">Estudio Demo</h1>
+      <p class="mt-4 text-lg text-slate-600">Peluquería de ejemplo para probar el flujo de reservas por chat.</p>
+      <p class="mt-8 text-slate-500">Tocá la burbuja 💬 abajo a la derecha para reservar un turno.</p>
+      <a href="/admin" class="mt-10 inline-block text-sm text-indigo-600 underline">Ir al panel de administración</a>
+    </main>
+    <ChatWidget client:load />
+  </body>
+</html>
